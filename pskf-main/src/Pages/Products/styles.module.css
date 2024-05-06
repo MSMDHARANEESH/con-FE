@@ -1,0 +1,47 @@
+
+
+.categoryNav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 16px 0; 
+  color: #333;
+  background-color: #f7f7f7; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  height: 30px;
+}
+
+.categoryNav div {
+  margin: 0 20px;
+}
+
+.categoryLink {
+  text-decoration: none;
+  color: #333;
+  padding: 12px 20px; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categoryLink:hover {
+  color: #fff; 
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 120px; 
+}
+
+.cardGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cardGroup .card {
+  flex: 0 0 calc(33.33% - 20px); 
+  margin: 10px; 
+}

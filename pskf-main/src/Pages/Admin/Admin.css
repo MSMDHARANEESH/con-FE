@@ -1,0 +1,94 @@
+
+
+.admin__container {
+    margin-top: 80px;
+}
+
+.admin__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.admin__form:hover {
+    transform: translateY(-5px);
+    
+}
+
+.admin__form div {
+    margin-bottom: 20px;
+}
+
+.admin__form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.admin__form input[type="number"],
+.admin__form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.admin__form input[type="number"]:focus,
+.admin__form input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+.admin__form button {
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.admin__form button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+.admin__nav {
+    margin-top: 50px;
+}
+
+.admin__nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.admin__nav ul li {
+    display: inline-block; 
+    margin-right: 20px; 
+}
+
+.admin__nav ul li a {
+    color: black; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+}
+
+.admin__nav ul li a:hover {
+    background-color: skyblue; 
+}

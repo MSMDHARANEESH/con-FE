@@ -1,0 +1,64 @@
+
+.menu {
+  @apply
+  relative
+  text-left
+  lg:inline-block
+  z-40
+}
+
+.menuButton {
+  @apply 
+  inline-flex 
+  justify-center 
+  w-full  
+  border-2
+  border-white
+  shadow-white
+  rounded-md
+  shadow-sm 
+  px-4 
+  py-2 
+  
+  text-[#F5F5F5] 
+  text-sm 
+  font-medium 
+  hover:bg-gray-800
+}
+
+.userCircleIcon {
+  @apply 
+  mr-2 
+  my-auto 
+  h-10 
+  w-10
+  text-[#F5F5F5] 
+}
+
+.chevronDownIcon {
+  @apply 
+  -mr-1 
+  ml-2 
+  my-auto 
+  h-8 
+  w-8
+  text-[#F5F5F5] 
+}
+
+.menuItems {
+  @apply 
+  origin-top-right 
+  absolute 
+  right-0 
+  mt-2 
+  w-full 
+  rounded-md 
+  shadow-md
+  shadow-white 
+  bg-white 
+  ring-2 
+  ring-black  
+  divide-y-2 
+  divide-black 
+  focus:outline-none
+}

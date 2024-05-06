@@ -1,0 +1,114 @@
+.footer__container {
+    background-color: #111827;
+    color: white;
+    padding: 40px 20px; 
+}
+
+.footer__items__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer__contact__container,
+.footer__message__container,
+.footer__social__link__container {
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer__message__header {
+    margin-left: 2.5rem;
+    font-size: 1.5rem; 
+    font-family: Arial, sans-serif; 
+    line-height: 2.5rem;
+}
+
+.footer__message__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer__message__form input{
+    background-color: aliceblue;color:black ;
+
+}
+.form__group {
+    margin-bottom: 20px;
+    width: max-content;
+}
+
+label {
+    font-weight: bold;
+    color: grey;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+    font-size: 1rem; 
+    font-family: Arial, sans-serif; 
+}
+
+button[type="submit"] {
+    background-color: #118271;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(160, 176, 179);
+}
+
+.footer__contacts {
+    list-style-type: none;
+    padding-top: 0rem;
+}
+
+.footer__contact__header {
+    margin-left: 3.5rem;
+   
+    font-size: 1.5rem; 
+    font-family: Arial, sans-serif; 
+   
+    margin-bottom: 0rem;
+}
+
+.footer__contact {
+    display: flex;
+    line-height: 1.5rem;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer__contact svg {
+    margin-right: 10px;
+    margin-top: 1.5rem;
+    color: gray;
+}
+
+.footer__contact span {
+    margin-top: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 1rem; 
+    font-family: Arial, sans-serif; 
+}
+
+#message {
+    width: 17rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    color: rgb(0, 0, 0); 
+    background-color: aliceblue;
+    font-size: 1rem; 
+    font-family: Arial, sans-serif; 
+}

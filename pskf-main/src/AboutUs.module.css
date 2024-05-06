@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #778899; 
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  text-align: center;
+}
+
+.ownerImage {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.contentContainer {
+  flex: 2;
+  padding-left: 50px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.contactInfo {
+  margin-top: 30px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.container,
+.title,
+.description,
+.contactItem {
+  color: #f0f0f0; 
+}
