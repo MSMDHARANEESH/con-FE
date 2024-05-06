@@ -34,7 +34,7 @@ const Signup = () => {
 
     try {
       // Send signup data to server
-      const response = await fetch('http://localhost:3030/user', {
+      const response = await fetch('https://con-be.onrender.com/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

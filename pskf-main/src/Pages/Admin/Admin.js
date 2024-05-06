@@ -44,7 +44,7 @@ const Admin = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:3030/products/Add', {
+            const response = await fetch('https://con-be.onrender.com/products/Add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -77,7 +77,7 @@ const Admin = () => {
         e.preventDefault();
         
         try {
-            const response = await fetch(`http://localhost:3030/products/${deleteFormData.id}`, {
+            const response = await fetch(`https://con-be.onrender.com/products/${deleteFormData.id}`, {
                 method: 'DELETE'
             });
 

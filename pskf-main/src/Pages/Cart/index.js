@@ -85,7 +85,7 @@ const Cart = () => {
       alert("Razorpay SDK failed to load. Are you online?");
       return;
     }
-    const result = await axios.post("http://localhost:3030/custom_pay", {
+    const result = await axios.post("https://con-be.onrender.com/custom_pay", {
       amount: parseFloat(subtotal),
     });
     if (!result) {
@@ -123,7 +123,7 @@ const Cart = () => {
   try {
     setprice(subtotal);
     const userData = { name, email, phone, address,price };
-    await axios.post("http://localhost:3030/summary", userData);
+    await axios.post("https://con-be.onrender.com/summary", userData);
     // Redirect or perform any other action after successful data storage
     // Example: navigator('/payment-success');
   } catch (error) {

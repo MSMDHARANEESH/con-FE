@@ -13,7 +13,7 @@ const UserDetail = () => {
 
     const fetchUserDetails = async () => {
         try {
-            const response = await fetch('http://localhost:3030/user');
+            const response = await fetch('https://con-be.onrender.com/user');
             if (!response.ok) {
                 throw new Error('Failed to fetch user data');
             }

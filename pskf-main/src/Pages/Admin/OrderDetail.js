@@ -13,7 +13,7 @@ const OrderDetail = () => {
 
     const fetchOrderDetails = async () => {
         try {
-            const response = await fetch('http://localhost:3030/summary');
+            const response = await fetch('https://con-be.onrender.com/summary');
             if (!response.ok) {
                 throw new Error('Failed to fetch order data');
             }
