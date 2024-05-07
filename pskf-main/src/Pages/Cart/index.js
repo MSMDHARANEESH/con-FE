@@ -175,7 +175,7 @@ const Cart = () => {
                               <FaMinus />
                             </button>
                             <span className="font-extralight text-lg">
-                              Weight: {item.weight} kg
+                              Length: {item.weight} m
                             </span>
                             <button
                               className="w-5 h-5 m-2 hover:text-green-500"
