@@ -42,7 +42,7 @@ const Admin = () => {
     // Handler for adding a new product
     const handleAddSubmit = async (e) => {
         e.preventDefault();
-        
+
         try {
             const response = await fetch('https://con-be.onrender.com/products/Add', {
                 method: 'POST',
@@ -51,7 +51,7 @@ const Admin = () => {
                 },
                 body: JSON.stringify(addFormData)
             });
-            
+
             if (!response.ok) {
                 throw new Error('Failed to add product');
             }
@@ -60,7 +60,7 @@ const Admin = () => {
         } catch (error) {
             console.error('Error adding product:', error.message);
         }
-        
+
         // Reset the form after submission
         setAddFormData({
             id: '',
@@ -75,7 +75,7 @@ const Admin = () => {
     // Handler for deleting a product
     const handleDeleteSubmit = async (e) => {
         e.preventDefault();
-        
+
         try {
             const response = await fetch(`https://con-be.onrender.com/products/${deleteFormData.id}`, {
                 method: 'DELETE'
@@ -89,31 +89,81 @@ const Admin = () => {
         } catch (error) {
             console.error('Error deleting product:', error.message);
         }
-        
-    
+
+
         setDeleteFormData({
             id: ''
         });
     };
 
-    return (
-        <div>
-            <nav className='admin__nav'>
-    <ul>
-        <li><a href="#" onClick={() => setActiveTab('add')}>Add Product</a></li>
-        <li><a href="#" onClick={() => setActiveTab('delete')}>Delete Product</a></li>
-        <li><a href="#" onClick={() => setActiveTab('user')}>User Details</a></li>
-        <li><a href="#" onClick={() => setActiveTab('order')}>Order Details</a></li>
-    </ul>
-</nav>
+    const [isadmin,setIsAdmin] = useState(false);
+    const [admincred,setAdminCred] = useState({
+        "username": "",
+        "password": ""
+    })
 
-            <br/>
-            <br/>
+    const handleAdminLogin = () => {
+        if(admincred.username=="admin" && admincred.password == "1234")
+            setIsAdmin(true);
+    }
+
+    const handleAdminChange = (e) => {
+        const {name, value} = e.target;
+        setAdminCred(cr => ({
+            ...cr,
+            [name]:value
+        }))
+    }
+
+    return (
+        <div className='relative'>
+            {
+                !isadmin ?
+                <div className='bg-white absolute inset-0 mx-auto flex justify-center items-center'>
+                    <form onSubmit={handleAdminLogin} className='w-80'>
+      <div>
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          name="username"
+          value={admincred.username}
+          onChange={handleAdminChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="text"
+          name="password"
+          value={admincred.password}
+          onChange={handleAdminChange}
+        />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+                    </div>
+                :
+                null
+            }
+        <div>
+
+        </div>
+            <nav className='admin__nav'>
+                <ul>
+                    <li><a href="#" onClick={() => setActiveTab('add')}>Add Product</a></li>
+                    <li><a href="#" onClick={() => setActiveTab('delete')}>Delete Product</a></li>
+                    <li><a href="#" onClick={() => setActiveTab('user')}>User Details</a></li>
+                    <li><a href="#" onClick={() => setActiveTab('order')}>Order Details</a></li>
+                </ul>
+            </nav>
+
+            <br />
+            <br />
             <div className="admin__container">
                 {activeTab === 'add' && (
                     <>
                         <h2>Add products</h2>
-                        <br/>
+                        <br />
                         <form className="admin__form" onSubmit={handleAddSubmit}>
                             {/* Form fields for adding product */}
                             <div>
@@ -148,7 +198,7 @@ const Admin = () => {
                 {activeTab === 'delete' && (
                     <>
                         <h2>Delete Product</h2>
-                        <br/>
+                        <br />
                         <form className="admin__form" onSubmit={handleDeleteSubmit}>
                             {/* Form fields for deleting product */}
                             <div>
@@ -165,10 +215,10 @@ const Admin = () => {
                     <UserDetail />
                 )}
                 {activeTab === 'order' && (
-                    <OrderDetail/>
+                    <OrderDetail />
                 )}
             </div>
-        </div>  
+        </div>
     );
 };
 
